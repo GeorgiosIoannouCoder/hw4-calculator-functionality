@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Bootstrap Google Calculator" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Georgios Ioannou" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Google Calculator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container mt-1" id="calculator">
+      <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6 text-center shadow-none">
+          <div class="row">
+            <div class="col my-1">
+              <p id="info">Radians</p>
+              <p id="answer">Ans =</p>
+              <input
+                type="text"
+                class="full-width rounded"
+                id="result"
+                disabled
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col my-2">
+              <div class="btn-group" role="group">
+                <button
+                  type="button"
+                  class="btn btn1 full-width operator"
+                  id="rad"
+                >
+                  Rad
+                </button>
+                <div class="vl"></div>
+                <button
+                  type="button"
+                  class="btn btn1 full-width operator"
+                  id="deg"
+                  style="color: #808080"
+                >
+                  Deg
+                </button>
+              </div>
+            </div>
+            <div class="col my-2">
+              <button
+                type="button"
+                class="btn btn1 full-width operator"
+                id="fact"
+              >
+                x!
+              </button>
+            </div>
+            <div class="col my-2">
+              <button
+                type="button"
+                class="btn btn1 full-width operator"
+                id="open"
+              >
+                (
+              </button>
+            </div>
+            <div class="col my-2">
+              <button
+                type="button"
+                class="btn btn1 full-width operator"
+                id="close"
+              >
+                )
+              </button>
+            </div>
+            <div class="col my-2">
+              <button
+                type="button"
+                class="btn btn1 full-width operator"
+                id="modulo"
+              >
+                %
+              </button>
+            </div>
+            <div class="col my-2">
+              <button
+                id="clear"
+                value="AC"
+                class="btn btn1 full-width operator"
+              >
+                AC
+              </button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <button
+                type="button"
+                class="btn btn1 full-width function"
+                id="sin"
+              >
+                sin
+              </button>
+            </div>
+            <div class="col">
+              <button
+                type="button"
+                class="btn btn1 full-width function"
+                id="ln"
+              >
+                ln
+              </button>
+            </div>
+            <div class="col">
+              <button
+                type="button"
+                class="btn btn2 full-width digit"
+                id="seven"
+              >
+                7
+              </button>
+            </div>
+            <div class="col">
+              <button
+                type="button"
+                class="btn btn2 full-width digit"
+                id="eight"
+              >
+                8
+              </button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn2 full-width digit" id="nine">
+                9
+              </button>
+            </div>
+            <div class="col">
+              <button
+                type="button"
+                class="btn btn3 full-width operator"
+                id="divide"
+              >
+                &#247;
+              </button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col my-2">
+              <button
+                type="button"
+                class="btn btn1 full-width function"
+                id="cos"
+              >
+                cos
+              </button>
+            </div>
+            <div class="col my-2">
+              <button
+                type="button"
+                class="btn btn1 full-width function"
+                id="log10"
+              >
+                log
+              </button>
+            </div>
+            <div class="col my-2">
+              <button type="button" class="btn btn2 full-width digit" id="four">
+                4
+              </button>
+            </div>
+            <div class="col my-2">
+              <button type="button" class="btn btn2 full-width digit" id="five">
+                5
+              </button>
+            </div>
+            <div class="col my-2">
+              <button type="button" class="btn btn2 full-width digit" id="six">
+                6
+              </button>
+            </div>
+            <div class="col my-2">
+              <button
+                type="button"
+                class="btn btn3 full-width operator"
+                id="multiplication"
+              >
+                &#215;
+              </button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <button
+                type="button"
+                class="btn btn1 full-width function"
+                id="tan"
+              >
+                tan
+              </button>
+            </div>
+            <div class="col">
+              <button
+                type="button"
+                class="btn btn1 full-width function"
+                id="sqrt"
+              >
+                &#8730;
+              </button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn2 full-width digit" id="one">
+                1
+              </button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn2 full-width digit" id="two">
+                2
+              </button>
+            </div>
+            <div class="col">
+              <button
+                type="button"
+                class="btn btn2 full-width digit"
+                id="three"
+              >
+                3
+              </button>
+            </div>
+            <div class="col">
+              <button
+                type="button"
+                class="btn btn3 full-width operator"
+                id="minus"
+              >
+                -
+              </button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col my-2">
+              <button
+                type="button"
+                class="btn btn1 full-width operator"
+                id="pow10"
+              >
+                EXP
+              </button>
+            </div>
+            <div class="col my-2">
+              <button
+                type="button"
+                class="btn btn1 full-width operator"
+                id="xpowy"
+              >
+                x<sup>y</sup>
+              </button>
+            </div>
+            <div class="col my-2">
+              <button type="button" class="btn btn2 full-width digit" id="zero">
+                0
+              </button>
+            </div>
+            <div class="col my-2">
+              <button
+                type="button"
+                class="btn btn2 full-width digit"
+                id="point"
+              >
+                .
+              </button>
+            </div>
+            <div class="col my-2">
+              <button
+                type="button"
+                class="btn btn4 full-width operator"
+                id="equals"
+              >
+                =
+              </button>
+            </div>
+            <div class="col my-2">
+              <button
+                type="button"
+                class="btn btn3 full-width operator"
+                id="add"
+              >
+                +
+              </button>
+            </div>
+          </div>
+
+          <div class="row">
+            <ul class="list-group">
+              <li class="list-group-item list-group-item-primary">
+                <b>Keyboard shortcuts supported</b>
+              </li>
+            </ul>
+            <div class="col-lg-6 my-2">
+              <ul class="list-group">
+                <li class="list-group-item">! = <b>x!</b></li>
+                <li class="list-group-item">( = <b>(</b></li>
+                <li class="list-group-item">) = <b>)</b></li>
+                <li class="list-group-item">% = <b>%</b></li>
+                <li class="list-group-item">s = <b>sin</b></li>
+                <li class="list-group-item">l = <b>ln</b></li>
+                <li class="list-group-item">/ = <b>÷</b></li>
+                <li class="list-group-item">c = <b>cos</b></li>
+                <li class="list-group-item">g = <b>log</b></li>
+              </ul>
+            </div>
+            <div class="col-lg-6 my-2">
+              <ul class="list-group">
+                <li class="list-group-item">* = <b>×</b></li>
+                <li class="list-group-item">t = <b>tan</b></li>
+                <li class="list-group-item">- = <b>-</b></li>
+                <li class="list-group-item">e = <b>EXP</b></li>
+                <li class="list-group-item">
+                  ^ = <b>x<sup>y</sup></b>
+                </li>
+                <li class="list-group-item">. = <b>.</b></li>
+                <li class="list-group-item">Enter = <b>=</b></li>
+                <li class="list-group-item">+ = <b>+</b></li>
+                <li class="list-group-item">
+                  Backspace = <b>delete last entry</b>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
