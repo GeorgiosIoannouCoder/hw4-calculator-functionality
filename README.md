@@ -15,3 +15,5 @@ The description and requirements of **hw4-calculator-functionality** are:
 My solution of **hw4-calculator-functionality** has been deployed using GitHub Pages and can be found [here](https://georgiosioannoucoder.github.io/hw4-calculator-functionality/).
 
 ## Demo
+
+https://github.com/GeorgiosIoannouCoder/hw4-calculator-functionality/assets/110848236/851c67e4-e3ed-4cad-aacd-2f73961e3334
